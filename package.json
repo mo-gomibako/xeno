@@ -5,19 +5,28 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "wrangler pages dev dist",
-    "deploy": "$npm_execpath run build && wrangler pages deploy dist"
+    "preview": "yarn build && wrangler pages dev dist --compatibility-date=2024-01-22",
+    "deploy": "yarn build && wrangler pages deploy dist --compatibility-date=2024-01-22",
+    "lint": "eslint --ext .ts,.tsx ."
   },
   "dependencies": {
+    "drizzle-orm": "^0.29.3",
     "hono": "^3.12.5"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20231218.0",
     "@hono/vite-cloudflare-pages": "^0.1.2",
     "@hono/vite-dev-server": "^0.3.1",
+    "@types/eslint": "^8.56.2",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "dotenv": "^16.3.2",
+    "drizzle-kit": "^0.20.13",
+    "eslint": "^8.56.0",
     "typescript": "^5.3.3",
     "vite": "^5.0.10",
-    "wrangler": "^3.22.5"
+    "vite-tsconfig-paths": "^4.3.1",
+    "wrangler": "^3.23.0"
   },
   "volta": {
     "node": "20.9.0"

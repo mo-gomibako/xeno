@@ -3,11 +3,8 @@ dist
 .wrangler
 .dev.vars
 
-# Change them to your taste:
+.env
 wrangler.toml
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
 
 .pnp.*
 .yarn/*
